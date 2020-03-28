@@ -16,3 +16,28 @@ function insertionSort(arr){
 
     return arr;
 }
+
+
+
+
+//Bubble Sorting - Сортировка Пузырьком
+
+function bubbleSort(arr){
+  for(let i = 0, l = arr.length-1; i < l; i++){
+      let wasSwap = false;
+    for(let j = 0, k = l-1; j < k; j++){
+
+        if(arr[j] > arr[j+1]){
+          let swap = arr[j];
+
+          arr[j] = arr[j+1];
+          arr[j+1] = swap
+            wasSwap = true;
+        }
+    }
+      if(!wasSwap){
+        break;
+      }
+  }
+  return arr;
+}
